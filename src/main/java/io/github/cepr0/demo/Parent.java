@@ -32,6 +32,7 @@ public class Parent implements Serializable {
 	private String name;
 
 	@Type(type = "json")
+	@Column(columnDefinition = "text")
 	private Details details;
 
 	@Type(type = "json")
