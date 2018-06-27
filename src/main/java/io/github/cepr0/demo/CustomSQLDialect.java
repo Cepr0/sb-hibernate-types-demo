@@ -7,6 +7,6 @@ import java.sql.Types;
 public class CustomSQLDialect extends H2Dialect {
 	public CustomSQLDialect() {
 		super();
-		registerColumnType(Types.OTHER, "text");
+		registerColumnType(Types.OTHER, "clob");
 	}
 }
