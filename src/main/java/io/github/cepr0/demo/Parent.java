@@ -32,7 +32,7 @@ public class Parent implements Serializable {
 	private String name;
 
 	@Type(type = "json")
-	@Column(columnDefinition = "text")
+	@Column(columnDefinition = "clob")
 	private Details details;
 
 	@Type(type = "json")

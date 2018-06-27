@@ -1,12 +1,12 @@
 package io.github.cepr0.demo;
 
-import org.hibernate.dialect.H2Dialect;
+import org.hibernate.dialect.HSQLDialect;
 
 import java.sql.Types;
 
-public class CustomSQLDialect extends H2Dialect {
+public class CustomSQLDialect extends HSQLDialect {
 	public CustomSQLDialect() {
 		super();
-		registerColumnType(Types.OTHER, "text");
+		registerColumnType(Types.OTHER, "clob");
 	}
 }
