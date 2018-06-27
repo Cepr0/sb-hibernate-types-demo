@@ -28,27 +28,16 @@ public class Parent implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Integer id;
 
-	@Column(columnDefinition = "text", nullable = false)
+	@Column(nullable = false)
 	private String name;
 
-	@Type(type = "string-array")
-	@Column(columnDefinition = "text[]")
-	private String[] emails;
-
-	@Type(type = "string-array")
-	@Column(columnDefinition = "text[]")
-	private String[] phones;
-
-	@Type(type = "jsonb")
-	@Column(columnDefinition = "jsonb")
+	@Type(type = "json")
 	private Details details;
 
-	@Type(type = "jsonb")
-	@Column(columnDefinition = "jsonb")
+	@Type(type = "json")
 	private List<Child> children;
 
 	@Type(type = "json")
-	@Column(columnDefinition = "text") // a probably bug is here: 'json' type doesn't work
 	private JsonNode properties;
 
 	protected Parent() {
@@ -57,16 +46,12 @@ public class Parent implements Serializable {
 	public Parent(
 			Integer id,
 			String name,
-			String[] emails,
-			String[] phones,
 			Details details,
 			List<Child> children,
 			JsonNode properties
 	) {
 		this.id = id;
 		this.name = name;
-		this.emails = emails;
-		this.phones = phones;
 		this.details = details;
 		this.children = children;
 		this.properties = properties;

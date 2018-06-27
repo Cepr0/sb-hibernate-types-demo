@@ -24,8 +24,6 @@ public class Application {
 		parentRepo.saveAll(asList(
 				Parent.builder()
 						.name("parent1")
-						.phones(new String[]{"1234567", "7654321"})
-						.emails(new String[]{"parent1@mail.com", "parent1@email.com"})
 						.details(new Details("Some bio", "Some CV"))
 						.children(asList(
 								new Child("child1", 10),
@@ -34,8 +32,6 @@ public class Application {
 						.build(),
 				Parent.builder()
 						.name("parent2")
-						.phones(new String[]{"12345678", "87654321"})
-						.emails(new String[]{"parent2@mail.com", "parent2@email.com"})
 						.details(new Details("Some bio", "Some CV"))
 						.children(asList(
 								new Child("child3", 12),
